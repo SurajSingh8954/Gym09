@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0f0f0f;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #000;
+}
+
+.logo {
+    color: #ff4500;
+}
+
+
+.contact-hero {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, .7),
+            rgba(0, 0, 0, .7));
+}
+
+.contact-hero h1 {
+    font-size: 4rem;
+    color: #ff4d00;
+    animation: slideDown 1s ease;
+}
+
+.contact-container {
+    padding: 80px 8%;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.info-card {
+    background: #1a1a1a;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: .4s;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(255, 77, 0, .5);
+}
+
+.info-card i {
+    font-size: 2rem;
+    color: #ff4d00;
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    flex: 1;
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    background: #ff4d00;
+    color: white;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.contact-form button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff4d00;
+}
+
+.popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    animation: pop .4s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pop {
+    from {
+        transform: scale(.5);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@media(max-width:768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+}

@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #111;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #000;
+}
+
+.logo {
+    color: #ff4500;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff4500;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .6),
+            rgba(0, 0, 0, .7)),
+        url("gym.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    color: #fff;
+    animation: slideDown 1s ease;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin: 10px 0 100px 0;
+    color: #ddd;
+}
+
+.btn {
+    margin: 0px 10px;
+    padding: 15px 35px;
+    background: #ff4d00;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.4s ease;
+}
+
+.btn:hover {
+    transform: translateY(1px);
+    box-shadow: 0 0 5px #ff4d00,
+        0 0 3px #ff4d00,
+        0 0 5px #ff4d00;
+}
+
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* .btn-secondary {
+    margin: 0px 10px;
+    padding: 15px 35px;
+    background: #ff4d00;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.4s ease;
+
+}
+
+.btn-secondary:hover {
+    transform: translateY(1px);
+    box-shadow: 0 0 5px #ff4d00,
+        0 0 3px #ff4d00,
+        0 0 5px #ff4d00;
+} */
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px;
+    background: #111;
+}
+
+.stat-box {
+    text-align: center;
+    color: white;
+}
+
+.stat-box h2 {
+    font-size: 3rem;
+    color: #ff4d00;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+}
